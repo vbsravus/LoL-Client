@@ -11,6 +11,16 @@
 
 }
 
+.divContainerLoginScreen label{
+    display: flex;
+    align-items: center;
+}
+
+.divUserBodyLoginScreen label{
+    display: flex;
+    align-items: center;
+}
+
 .divVideoBodyLoginScreen{
     width: 70%;
     height: 100vh;
@@ -36,7 +46,8 @@
     margin-left: -10%;
 }
 
-.divVideoBodyLoginScreen div{
+.divVideoBodyLoginScreen .animationButton{
+    z-index: 7;
     width: 120px;
     position: absolute;
     bottom: 2.5%;
@@ -64,9 +75,23 @@
     margin-top: 10%;
 }
 
-.divUserBodyLoginScreen label{
+.divUserBodyLoginScreen .staySignedIn{
     margin-left: -12vw;
     margin-top: 5%;
+}
+
+.divUserBodyLoginScreen .labelSignIn{
+    width: 100%;
+    padding: 1%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#buttonSignIn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .divUserBodyLoginScreen input[type=text], .divUserBodyLoginScreen input[type=password]{
@@ -76,9 +101,10 @@
 }
 
 .divUserBodyLoginScreen button:disabled, .divUserBodyLoginScreen button[disabled]{
-    padding: 2%;
-    width: 70%;
-    margin-top: 25vh;
+    padding: 1%;
+    width: 20%;
+    position: absolute;
+    bottom: 5%;
     background-color: #00101f;
     color: white;
     border: 1px solid #857762;
@@ -87,9 +113,10 @@
 }
 
 .divUserBodyLoginScreen button:disabled:hover, .divUserBodyLoginScreen button[disabled]:hover{
-    padding: 2%;
-    width: 70%;
-    margin-top: 25vh;
+    padding: 1%;
+    width: 20%;
+    position: absolute;
+    bottom: 5%;
     background-color: #00101f;
     color: white;
     border: 1px solid #857762;
@@ -99,9 +126,10 @@
 }
 
 .divUserBodyLoginScreen button{
-    padding: 2%;
-    width: 70%;
-    margin-top: 25vh;
+    padding: 1%;
+    width: 20%;
+    position: absolute;
+    bottom: 5%;
     background-color: #001b35;
     color: white;
     border: 1px solid #857762;
@@ -111,12 +139,44 @@
 
 .divUserBodyLoginScreen button:hover{
     transition: 0.5s;
-    padding: 2%;
-    width: 70%;
-    margin-top: 25vh;
+    padding: 1%;
+    width: 20%;
+    position: absolute;
+    bottom: 5%;
     background-color: #00274b;
     color: #c4ae8d;
     border: 1px solid #c4ae8d;
     opacity: 100%;
     cursor: pointer;
+}
+
+.videoLoginShadow{
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 5;
+}
+
+.divUserBodyLoginScreen p{
+    position: absolute;
+    bottom: -1%;
+}
+
+.loadingSpinner{
+    width: 100px;
+    height: 100px;
+    animation-name: spin;
+    animation-duration: 700ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
 }
