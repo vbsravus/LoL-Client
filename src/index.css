@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "spiegel";
+  src: url("./fonts/spiegel.ttf") ;
+}
+
+@font-face {
+  font-family: "beaufort";
+  src: url("./fonts/beaufort.ttf");
+}
+
+body {
+  margin: 0;
+  font-family: "beaufort";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input {
+  font-family: "beaufort";
+}
